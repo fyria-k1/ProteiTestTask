@@ -26,11 +26,11 @@ public class SucceededAuthorization extends BaseTest {
         ver.ifElementHasText(regPage.variant12, "reg.variant12");
 
         ver.ifElementIsVisible(regPage.checkBox21);
-        ver.ifElementHasText(regPage.variant21, "reg.variant12");
+        ver.ifElementHasText(regPage.variant21, "reg.variant21");
         ver.ifElementIsVisible(regPage.checkBox22);
-        ver.ifElementHasText(regPage.variant22, "reg.variant12");
+        ver.ifElementHasText(regPage.variant22, "reg.variant22");
         ver.ifElementIsVisible(regPage.checkBox23);
-        ver.ifElementHasText(regPage.variant23, "reg.variant12");
+        ver.ifElementHasText(regPage.variant23, "reg.variant23");
 
         ver.ifElementIsVisible(regPage.dataSend);
 
