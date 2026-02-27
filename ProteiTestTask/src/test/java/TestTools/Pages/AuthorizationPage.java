@@ -17,6 +17,13 @@ public class AuthorizationPage {
 
     public SelenideElement authBtn = $x("//button[@id= 'authButton']");
 
+
+    public SelenideElement errorMessageWrongEmailFormat = $x("//div[@id = 'emailFormatError']");
+
+    public SelenideElement errorMessageWrongEmailOrPasswordFormat = $x("//div[@id = 'invalidEmailPassword']");
+
+
+
     public AuthorizationPage(String url){
         Selenide.open(url);
     }
