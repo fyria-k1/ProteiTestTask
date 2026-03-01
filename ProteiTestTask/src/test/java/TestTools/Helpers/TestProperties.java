@@ -1,6 +1,8 @@
 package TestTools.Helpers;
 
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 public class TestProperties {
@@ -13,7 +15,7 @@ public class TestProperties {
             if (is == null) {
                 throw new RuntimeException("testData.properties not found");
             }
-            props.load(is);
+            props.load(new InputStreamReader(is, StandardCharsets.UTF_8));
         } catch (Exception e) {
             throw new RuntimeException("Failed to load testData.properties", e);
         }

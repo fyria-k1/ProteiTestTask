@@ -7,8 +7,20 @@ import com.codeborne.selenide.Selenide;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.net.URL;
+
 public abstract class BaseTest{
-    protected final static String baseUrl= "file:///C:/Users/andre/Downloads/qa-test.html";
+    protected final static String baseUrl;
+
+    static {
+        String resourcePath = "qa-test.html";
+
+        URL url = BaseTest.class.getClassLoader().getResource(resourcePath);
+        if (url == null) {
+            throw new IllegalStateException("Файл не найден в resources: " + resourcePath);
+        }
+        baseUrl = url.toString();
+    }
 
     protected final ActionManager act = new ActionManager();
     protected final VerificationManager ver = new VerificationManager();

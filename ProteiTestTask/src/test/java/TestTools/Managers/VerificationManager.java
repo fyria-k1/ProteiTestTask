@@ -11,6 +11,10 @@ public class VerificationManager {
         Assert.assertTrue(sel.isDisplayed());
     }
 
+    public void ifElementIsNotVisible(SelenideElement sel) {
+        Assert.assertFalse(sel.isDisplayed());
+    }
+
     public void ifElementHasText(SelenideElement sel, String key){
         sel.equals(exactText(key));
     }
@@ -25,4 +29,16 @@ public class VerificationManager {
                         "Выбор 2"
                 ));
     }
+
+    public void сheckTableData(String tableNumber, String email,String name,String gender,String choice1, String choice2){
+        $$("#dataTable tbody tr:nth-child(" +tableNumber+ ") td")
+                .shouldHave(exactTexts(
+                        email,
+                        name,
+                        gender,
+                        choice1,
+                        choice2
+                ));
+    }
+
 }
