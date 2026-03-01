@@ -15,7 +15,11 @@ public class AuthorizationPage {
 
     public SelenideElement passwordInput = $x("//input[@id= 'loginPassword']");
 
+
+
     public SelenideElement authBtn = $x("//button[@id= 'authButton']");
+
+    public SelenideElement btnCloseErrorMessage = $x("//a[@class = 'uk-alert-close uk-close']");
 
 
     public SelenideElement errorMessageWrongEmailFormat = $x("//div[@id = 'emailFormatError']");

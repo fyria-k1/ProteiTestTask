@@ -1,6 +1,5 @@
 package TestTools.Pages;
 
-import TestTools.Managers.BaseTest;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
@@ -21,7 +20,7 @@ public class RegistrationPage{
 
     public SelenideElement gender = $x("//label[@for= 'dataGender']");
 
-    public SelenideElement genderInput = $("#dataGender");
+    public SelenideElement genderInput = $x("//select[@id ='dataGender']");
 
 
 
@@ -49,20 +48,22 @@ public class RegistrationPage{
 
 
 
-    public SelenideElement dataSend = $("#dataSend");
+    public SelenideElement tableData = $("#dataTable tbody tr td");
 
 
 
-    public void сheckTable(){
-        $$("#dataTable thead th")
-                .shouldHave(exactTexts(
-                        "E-Mail",
-                        "Имя",
-                        "Пол",
-                        "Выбор 1",
-                        "Выбор 2"
-                ));
-    }
+    public SelenideElement btnDataSend = $("#dataSend");
+
+    public SelenideElement btnOk = $x("//button[@class = 'uk-button uk-button-primary uk-modal-close']");
+
+    public SelenideElement btnCloseErrorMessage = $x("//a[@class = 'uk-alert-close uk-close']");
+
+
+    public SelenideElement wrongNameMessage = $("#blankNameError");
+
+    public SelenideElement wrongEmailMessage = $("#emailFormatError");
+
+
 
     public RegistrationPage(String url) {
         Selenide.open(url);
