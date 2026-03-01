@@ -1,0 +1,4 @@
+- [Страница авторизации позитивные сценарии](https://team-wl7b.testit.software/projects/1/tests?isolatedSection=6c607045-7ca2-4c48-a2a7-93034b9c5fdc) — AuthorizationTestsPositive
+- [Страница авторизации негативные сценарии](https://team-wl7b.testit.software/projects/1/tests?isolatedSection=f302d3a8-7ed6-4b48-8a41-bc1d997fc361) — AuthorizationTestsNegative
+- [Страница регистрации позитивные сценарии](https://team-wl7b.testit.software/projects/1/tests?isolatedSection=88e19a62-cb80-4251-8d13-a20d8f41e1af) — RegistrationTestsPositive
+- [Страница регистрации негативные сценарии](https://team-wl7b.testit.software/projects/1/tests?isolatedSection=b4095958-0904-415d-a12b-55c67cb2fd56) — RegistrationTestsNegative
